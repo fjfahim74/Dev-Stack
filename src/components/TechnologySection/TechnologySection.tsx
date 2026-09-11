@@ -1,18 +1,17 @@
 import TechnologyGrid from './TechnologyGrid'
 import YourStack from './YourStack'
 import { Suspense, useState } from 'react'
+import type { Tech } from '../../types/Tech'
 
-const technologyFetch = async () => {
+const technologyFetch = async (): Promise<Tech[]> => {
     const res = await fetch("/technologies.json");
     const data = await res.json();
     return data;
 };
 
-
-
-
-
 function TechnologySection() {
+    const [selectedTechnologies, setSelectedTechnologies] = useState<Tech[]>([])
+    console.log(selectedTechnologies)
     const [technologyPromise] = useState(() => technologyFetch())
     return (
         <section>
@@ -26,11 +25,15 @@ function TechnologySection() {
 
                     <div>
                         <div>
-                            <TechnologyGrid technologyPromise={technologyPromise} />
+                            <TechnologyGrid technologyPromise={technologyPromise}
+                                selectedTechnologies={selectedTechnologies}
+                                setSelectedTechnologies={setSelectedTechnologies}
+                            />
                         </div>
 
                         <div>
-                            <YourStack />
+                            <YourStack selectedTechnologies={selectedTechnologies}
+                                setSelectedTechnologies={setSelectedTechnologies} />
                         </div>
                     </div>
                 </Suspense>
