@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from 'react'
+import { type Dispatch, type SetStateAction } from 'react'
 import type { Tech } from '../../types/Tech'
 import { toast } from 'react-toastify'
 
@@ -15,10 +15,12 @@ function TechnologyCard({
     setSelectedTechnologies,
 }: TechnologyCardProps) {
 
-    const [isSelected, setIsSelected] = useState(false)
+    const isSelected = selectedTechnologies.some(
+        (item) => item.id === technology.id
+    )
 
     const handleSelectTechnology = () => {
-        setIsSelected(true)
+
 
         setSelectedTechnologies([...selectedTechnologies, technology])
         toast.success(`${technology.name} is added successfully`)
