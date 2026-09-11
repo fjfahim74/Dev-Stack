@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from 'react'
 import type { Tech } from '../../types/Tech'
 import StackItem from './StackItem'
+import { toast } from 'react-toastify'
 
 
 interface YourStackProps {
@@ -14,6 +15,7 @@ function YourStack({
 }: YourStackProps) {
     const handleRemoveAll = () => {
         setSelectedTechnologies([])
+        toast.success("All technologies are removed successfully")
     }
     if (selectedTechnologies.length === 0) {
         return (

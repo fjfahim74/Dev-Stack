@@ -1,5 +1,6 @@
 import type { Dispatch, SetStateAction } from 'react'
 import type { Tech } from '../../types/Tech'
+import { toast } from 'react-toastify'
 
 interface StackItemProps {
     technology: Tech
@@ -18,6 +19,7 @@ function StackItem({
         )
 
         setSelectedTechnologies(remainingTechnologies)
+        toast.success(`${technology.name} is removed successfully`)
     }
 
     return (
