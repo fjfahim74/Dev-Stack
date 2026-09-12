@@ -13,7 +13,7 @@ function Footer() {
                             <img
                                 src={logoText}
                                 alt="Dev Stack"
-                                className="w-36 h-auto"
+                                className="w-32 h-auto"
                             />
                         </div>
 

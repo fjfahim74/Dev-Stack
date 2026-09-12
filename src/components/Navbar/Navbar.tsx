@@ -3,7 +3,7 @@ import hamburger from '../../assets/hamburger.png'
 
 function Navbar() {
     return (
-        <nav className="sticky top-0 z-50 border-b border-[#F1F5F9]">
+        <nav className="sticky top-0 z-50 border-b border-[#F1F5F9] bg-white">
 
             <div className="container mx-auto grid grid-cols-3 items-center px-6 py-4">
 
@@ -18,11 +18,11 @@ function Navbar() {
                 <img
                     src={logoText}
                     alt="Dev Stack"
-                    className="w-32 h-auto justify-self-center md:justify-self-start"
+                    className="w-28 sm:w-32 h-auto justify-self-center md:justify-self-start"
                 />
 
                 {/* Menu */}
-                <ul className="hidden md:flex gap-6 items-center justify-self-center">
+                <ul className="hidden md:flex gap-4 lg:gap-6 items-center justify-self-center text-sm lg:text-base">
                     <li>
                         <a href="#" className="text-pink-500">
                             Home
@@ -55,12 +55,12 @@ function Navbar() {
                 </ul>
 
                 {/* Buttons */}
-                <div className="flex gap-4 items-center justify-self-end">
-                    <button className="hover:text-pink-500">
+                <div className="flex gap-2 sm:gap-3 items-center justify-self-end">
+                    <button className="text-xs sm:text-sm hover:text-pink-500">
                         Sign In
                     </button>
 
-                    <button className="rounded-full bg-pink-500 text-white px-5 py-2 hover:bg-pink-600">
+                    <button className="rounded-full bg-pink-500 text-white px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm hover:bg-pink-600">
                         Sign Up
                     </button>
                 </div>
