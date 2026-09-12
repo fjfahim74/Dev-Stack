@@ -87,7 +87,7 @@ function Footer() {
                 <div className="border-t border-gray-200 py-5 flex items-center justify-between gap-3">
 
                     <p className="text-sm text-gray-400">
-                        © 2026 Dev Stack. All rights reserved.
+                        © 2026 Dev Stack.<span className="sm:hidden"><br /></span> All rights reserved.
                     </p>
 
                     <div className="flex gap-4 text-sm text-gray-400">

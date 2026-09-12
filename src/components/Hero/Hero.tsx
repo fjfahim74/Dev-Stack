@@ -29,10 +29,10 @@ export default function Hero() {
                     and put together the stack that fits your next project.
                 </p>
 
-                <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-4">
+                <div className="mt-6 flex justify-center lg:justify-start gap-4">
                     <button
                         type="button"
-                        className="rounded-[10px] w-50 h-12 text-white shadow-md"
+                        className="rounded-[10px] w-40 sm:w-50 h-12 text-sm sm:text-base text-white shadow-md"
                         style={{ background: brandGradient }}
                     >
                         Explore Technologies
@@ -40,7 +40,7 @@ export default function Hero() {
 
                     <button
                         type="button"
-                        className="rounded-[10px] w-50 h-12 border border-gray-300 hover:border-gray-400"
+                        className="rounded-[10px] w-40 sm:w-50 h-12 text-sm sm:text-base border border-gray-300 hover:border-gray-400"
                     >
                         Learn More
                     </button>

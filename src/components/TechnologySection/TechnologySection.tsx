@@ -17,7 +17,7 @@ function TechnologySection() {
         <section className="-mt-10 md:py-5">
             <div className="container mx-auto px-6">
 
-                <div className="mb-8">
+                <div className="mb-2 md:mb-8">
                     <h2 className="text-[25px] text-center md:text-4xl md:text-start font-extrabold">Explore the <span className="text-pink-500">Technologies</span>
                     </h2>
 
