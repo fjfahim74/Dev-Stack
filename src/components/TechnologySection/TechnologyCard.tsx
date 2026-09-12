@@ -25,13 +25,12 @@ function TechnologyCard({
         setSelectedTechnologies([...selectedTechnologies, technology])
         toast.success(`${technology.name} is added successfully`)
     }
+    const getBadgeColor = () => technology.badge === "Popular" ? "badge-primary" : technology.badge === "Versatile" ? "badge-secondary" : technology.badge === "Fast" ? "badge-accent" : technology.badge === "SSR / Edge" ? "badge-info" : technology.badge === "Standard" ? "badge-info" : technology.badge === "Top SQL" ? "badge-success" : technology.badge === "Cache" ? "badge-warning" : technology.badge === "Ubiquitous" ? "badge-primary" : technology.badge === "Essential" ? "badge-error" : technology.badge === "Modern" ? "badge-accent" : technology.badge === "Containers" ? "badge-info" : technology.badge === "Robust" ? "badge-success" : "badge-neutral"
 
     return (
         <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
 
             <div className="relative">
-
-
 
                 <h3 className="font-semibold text-lg">
                     {technology.name}
@@ -44,12 +43,9 @@ function TechnologyCard({
                     {technology.description}
                 </p>
 
-
-                <span className="absolute top-0 right-0 text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-700">
+                <span className={`absolute top-0 right-0 badge badge-soft ${getBadgeColor()}`}>
                     {technology.badge}
                 </span>
-
-
 
                 <div className="mt-6 flex items-center justify-between">
                     <span className="text-xs bg-gray-100 px-2 py-1 rounded">
