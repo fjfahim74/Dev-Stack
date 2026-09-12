@@ -16,17 +16,24 @@ function TechnologySection() {
     return (
         <section className="py-5">
             <div className="container mx-auto px-6">
-                <Suspense fallback={<h2 className="text-center py-8">Loading.......</h2>}>
-                    <div className="mb-8">
-                        <h2 className="text-3xl md:text-4xl font-extrabold">Explore the <span className="text-pink-500">Technologies</span>
-                        </h2>
 
-                        <p className="mt-3 text-gray-600">
-                            Pick one technology per category to build your ideal stack.
-                        </p>
+                <div className="mb-8">
+                    <h2 className="text-3xl md:text-4xl font-extrabold">Explore the <span className="text-pink-500">Technologies</span>
+                    </h2>
+
+                    <p className="mt-3 text-gray-600">
+                        Pick one technology per category to build your ideal stack.
+                    </p>
+                </div>
+
+                <Suspense fallback={
+                    <div className="flex justify-center py-8">
+                        <button className="btn">
+                            <span className="loading loading-spinner"></span>
+                            loading
+                        </button>
                     </div>
-
-
+                }>
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                         <div className="lg:col-span-3">
                             <TechnologyGrid technologyPromise={technologyPromise}
