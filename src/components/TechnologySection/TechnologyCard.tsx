@@ -28,9 +28,9 @@ function TechnologyCard({
     const getBadgeColor = () => technology.badge === "Popular" ? "badge-primary" : technology.badge === "Versatile" ? "badge-secondary" : technology.badge === "Fast" ? "badge-accent" : technology.badge === "SSR / Edge" ? "badge-info" : technology.badge === "Standard" ? "badge-info" : technology.badge === "Top SQL" ? "badge-success" : technology.badge === "Cache" ? "badge-warning" : technology.badge === "Ubiquitous" ? "badge-primary" : technology.badge === "Essential" ? "badge-error" : technology.badge === "Modern" ? "badge-accent" : technology.badge === "Containers" ? "badge-info" : technology.badge === "Robust" ? "badge-success" : "badge-neutral"
 
     return (
-        <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+        <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 h-full flex flex-col">
 
-            <div className="relative">
+            <div className="relative flex-1 flex flex-col">
 
                 <h3 className="font-semibold text-lg">
                     {technology.name}
@@ -47,7 +47,7 @@ function TechnologyCard({
                     {technology.badge}
                 </span>
 
-                <div className="mt-6 flex items-center justify-between">
+                <div className="mt-auto pt-6 flex items-center justify-between">
                     <span className="text-xs bg-gray-100 px-2 py-1 rounded">
                         {technology.category}
                     </span>
@@ -62,7 +62,7 @@ function TechnologyCard({
                 </div>
             </div>
 
-            <div className="mt-5">
+            <div className="mt-auto pt-5">
                 <button
                     onClick={handleSelectTechnology}
                     disabled={isSelected}

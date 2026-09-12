@@ -39,7 +39,7 @@ function StackItem({
 
             <button type="button" onClick={handleRemoveTechnology}
                 aria-label={`Remove ${technology.name}`}
-                className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-gray-50">
+                className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-blue-50">
                 X
             </button>
         </div>
