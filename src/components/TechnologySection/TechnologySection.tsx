@@ -14,7 +14,7 @@ function TechnologySection() {
     console.log(selectedTechnologies)
     const [technologyPromise] = useState(() => technologyFetch())
     return (
-        <section className="py-12">
+        <section className="py-5">
             <div className="container mx-auto px-6">
                 <Suspense fallback={<h2 className="text-center py-8">Loading.......</h2>}>
                     <div className="mb-8">

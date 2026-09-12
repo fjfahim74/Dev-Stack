@@ -16,7 +16,7 @@ function TechnologyGrid({ technologyPromise, selectedTechnologies,
     const technologies = use(technologyPromise)
     console.log(technologies)
     return (
-        <div>
+        <div className="py-2">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {technologies.map((technology: Tech, ind: number) => {
                     return (
