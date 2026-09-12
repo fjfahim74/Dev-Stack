@@ -14,14 +14,14 @@ function TechnologySection() {
     console.log(selectedTechnologies)
     const [technologyPromise] = useState(() => technologyFetch())
     return (
-        <section className="py-5">
+        <section className="-mt-10 md:py-5">
             <div className="container mx-auto px-6">
 
                 <div className="mb-8">
-                    <h2 className="text-3xl md:text-4xl font-extrabold">Explore the <span className="text-pink-500">Technologies</span>
+                    <h2 className="text-[25px] text-center md:text-4xl md:text-start font-extrabold">Explore the <span className="text-pink-500">Technologies</span>
                     </h2>
 
-                    <p className="mt-3 text-gray-600">
+                    <p className="mt-3 text-[15px] md:text-[17px] text-center md:text-start text-gray-600">
                         Pick one technology per category to build your ideal stack.
                     </p>
                 </div>

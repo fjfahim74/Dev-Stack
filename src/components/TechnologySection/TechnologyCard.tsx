@@ -52,7 +52,7 @@ function TechnologyCard({
                         {technology.category}
                     </span>
 
-                    <span className="text-xs bg-gray-100 px-2 py-1 rounded">
+                    <span className="text-xs text-gray-500 px-2 py-1">
                         {technology.difficulty}
                     </span>
 
