@@ -40,12 +40,6 @@ function YourStack({
                     <p className="text-sm text-gray-500  mt-1">{selectedTechnologies.length} Technology selected</p>
                 </div>
 
-                <div className="mt-4">
-                    <button type="button" onClick={handleRemoveAll} className="w-full py-2 px-4 rounded-md border border-red-200 text-red-600 font-medium hover:bg-red-50">
-                        Remove All
-                    </button>
-                </div>
-
             </div>
 
             <div className="mt-4 space-y-3">
@@ -59,6 +53,11 @@ function YourStack({
                         />
                     )
                 })}
+            </div>
+            <div className="mt-4">
+                <button type="button" onClick={handleRemoveAll} className="w-full py-2 px-4 rounded-md border border-red-200 text-red-600 font-medium hover:bg-red-50">
+                    Remove All
+                </button>
             </div>
         </div>
     )
