@@ -14,31 +14,35 @@ function TechnologySection() {
     console.log(selectedTechnologies)
     const [technologyPromise] = useState(() => technologyFetch())
     return (
-        <section>
-            <div className="container mx-auto">
-                <Suspense fallback={<h2>Loading.......</h2>}>
-                    <h2>Explore the Technologies</h2>
+        <section className="py-12">
+            <div className="container mx-auto px-6">
+                <Suspense fallback={<h2 className="text-center py-8">Loading.......</h2>}>
+                    <div className="mb-8">
+                        <h2 className="text-3xl md:text-4xl font-extrabold">Explore the <span className="text-pink-500">Technologies</span>
+                        </h2>
 
-                    <p>
-                        Pick one technology per category to build your ideal stack.
-                    </p>
+                        <p className="mt-3 text-gray-600">
+                            Pick one technology per category to build your ideal stack.
+                        </p>
+                    </div>
 
-                    <div>
-                        <div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                        <div className="lg:col-span-3">
                             <TechnologyGrid technologyPromise={technologyPromise}
                                 selectedTechnologies={selectedTechnologies}
                                 setSelectedTechnologies={setSelectedTechnologies}
                             />
                         </div>
 
-                        <div>
+                        <div className="lg:col-span-1">
                             <YourStack selectedTechnologies={selectedTechnologies}
                                 setSelectedTechnologies={setSelectedTechnologies} />
                         </div>
                     </div>
                 </Suspense>
-            </div>
-        </section>
+            </div >
+        </section >
     )
 }
 

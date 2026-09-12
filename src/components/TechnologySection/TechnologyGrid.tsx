@@ -17,16 +17,18 @@ function TechnologyGrid({ technologyPromise, selectedTechnologies,
     console.log(technologies)
     return (
         <div>
-            {technologies.map((technology: Tech, ind: number) => {
-                return (
-                    <TechnologyCard
-                        key={ind}
-                        technology={technology}
-                        selectedTechnologies={selectedTechnologies}
-                        setSelectedTechnologies={setSelectedTechnologies}
-                    />
-                )
-            })}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {technologies.map((technology: Tech, ind: number) => {
+                    return (
+                        <TechnologyCard
+                            key={ind}
+                            technology={technology}
+                            selectedTechnologies={selectedTechnologies}
+                            setSelectedTechnologies={setSelectedTechnologies}
+                        />
+                    )
+                })}
+            </div>
         </div>
     )
 }
